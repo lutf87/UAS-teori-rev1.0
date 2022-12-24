@@ -1,4 +1,5 @@
 @extends('layouts.template')
+@section('title', 'Home Page')
 @section('content')
 
     <div class="container">

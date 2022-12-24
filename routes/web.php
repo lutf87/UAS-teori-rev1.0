@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.pages.home');
+Route::group(['prefix'=>'/'], function() {
+    Route::get('', [HomePageController::class, 'home'])->name('page.home');
 });
