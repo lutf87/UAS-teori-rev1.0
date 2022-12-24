@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
 
-    @include('contents.styesheet')
+    @include('admin.contents.styesheet')
 
 </head>
 
@@ -20,11 +20,11 @@
         </div>
 
         <!-- Navbar -->
-        @include('contents.navbar')
+        @include('admin.contents.navbar')
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @include('contents.sidebar')
+        @include('admin.contents.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -55,7 +55,7 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
+        <footer class="main-footer bg-dark">
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
@@ -71,7 +71,7 @@
     </div>
     <!-- ./wrapper -->
 
-    @include('contents.script')
+    @include('admin.contents.script')
 
 </body>
 
