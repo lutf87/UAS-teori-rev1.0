@@ -10,4 +10,10 @@ class HomePageController extends Controller
     {
         return view('layouts.pages.home');
     }
+
+    public function kategori()
+    {
+        return view('layouts.pages.kategori');
+    }
+
 }

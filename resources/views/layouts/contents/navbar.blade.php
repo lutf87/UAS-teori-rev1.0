@@ -12,10 +12,10 @@
                     <a class="nav-link" href="{{ route('page.home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Produk</a>
+                    <a class="nav-link" href="{{ route('page.kategori') }}">Kategori</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kategori</a>
+                    <a class="nav-link" href="#">Produk</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Kontak</a>
