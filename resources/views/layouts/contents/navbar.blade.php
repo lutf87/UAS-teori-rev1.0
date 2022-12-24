@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">Toko</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
