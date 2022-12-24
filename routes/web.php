@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,9 @@ Route::group(['prefix'=>'/'], function() {
 
     // kategori
     Route::get('kategori', [HomePageController::class, 'kategori'])->name('page.kategori');
+});
+
+Route::group(['prefix'=>'/admin'], function() {
+    //dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 });
