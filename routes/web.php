@@ -6,6 +6,7 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,5 +58,10 @@ Route::group(['prefix'=>'/admin'], function() {
         Route::get('', [TransaksiController::class, 'index'])->name('admin.transaksi.index');
         Route::get('show/{id}', [TransaksiController::class, 'show'])->name('admin.transaksi.show');
         Route::get('edit/{id}', [TransaksiController::class, 'edit'])->name('admin.transaksi.edit');
+    });
+
+    // user profile
+    Route::group(['prefix'=>'profile'], function() {
+        Route::get('', [UserController::class, 'index'])->name('admin.profile.index');
     });
 });
