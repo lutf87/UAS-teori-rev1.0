@@ -29,5 +29,8 @@ Route::group(['prefix'=>'/admin'], function() {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
     // kategori
-    Route::get('kategori', [KategoriController::class, 'index'])->name('admin.kategori');
+    Route::group(['prefix'=>'kategori'], function() {
+        Route::get('', [KategoriController::class, 'index'])->name('admin.kategori.index');
+        Route::get('create', [KategoriController::class, 'create'])->name('admin.kategori.create');
+    });
 });

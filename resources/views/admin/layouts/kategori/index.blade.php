@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <h4 class="card-title">Kategori Produk</h4>
                     <div class="card-tools">
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="{{ route('admin.kategori.create') }}" class="btn btn-sm btn-primary">
                             Baru
                         </a>
                     </div>
