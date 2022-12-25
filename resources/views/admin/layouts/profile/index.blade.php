@@ -37,7 +37,7 @@
                         Jekulo, Kab Kudus
                     </p>
                     <hr>
-                    <a href="#" class="btn btn-primary btn-block">Setting</a>
+                    <a href="{{ route('admin.profile.edit', 1) }}" class="btn btn-primary btn-block">Setting</a>
                 </div>
             </div>
         </div>

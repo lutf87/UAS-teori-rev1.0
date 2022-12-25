@@ -63,5 +63,6 @@ Route::group(['prefix'=>'/admin'], function() {
     // user profile
     Route::group(['prefix'=>'profile'], function() {
         Route::get('', [UserController::class, 'index'])->name('admin.profile.index');
+        Route::get('setting/{id}', [UserController::class], 'edit')->name('admin.profile.edit');
     });
 });

@@ -10,4 +10,10 @@ class UserController extends Controller
     {
         return view('admin.layouts.profile.index');
     }
+
+    public function edit($id)
+    {
+        return view('admin.layouts.profile.setting');
+    }
+
 }
