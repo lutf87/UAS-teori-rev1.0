@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,9 @@ Route::group(['prefix'=>'/'], function() {
 });
 
 Route::group(['prefix'=>'/admin'], function() {
-    //dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    // dashboard
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    // kategori
+    Route::get('kategori', [KategoriController::class, 'index'])->name('admin.kategori');
 });
