@@ -4,6 +4,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
@@ -64,5 +65,10 @@ Route::group(['prefix'=>'/admin'], function() {
     Route::group(['prefix'=>'profile'], function() {
         Route::get('', [UserController::class, 'index'])->name('admin.profile.index');
         Route::get('setting/{id}', [UserController::class, 'edit'])->name('admin.profile.edit');
+    });
+
+    // laporan
+    Route::group(['prefix'=>'laporan'], function() {
+        Route::get('', [LaporanController::class, 'index'])->name('admin.laporan.index');
     });
 });
