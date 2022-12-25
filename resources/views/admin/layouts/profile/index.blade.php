@@ -13,29 +13,14 @@
                     <h3 class="profile-username text-center">Fadlur Rohman</h3>
                     <p class="text-muted text-center">Member sejak : 20 Des 2020</p>
                     <hr>
-                    <strong>
-                        <i class="fas fa-map-marker mr-2"></i>
-                        Alamat
-                    </strong>
-                    <p class="text-muted">
-                        Jekulo, Kab Kudus
-                    </p>
+                    <strong><i class="fas fa-map-marker mr-2"></i>Alamat</strong>
+                    <p class="text-muted">Jekulo, Kab Kudus</p>
                     <hr>
-                    <strong>
-                        <i class="fas fa-envelope mr-2"></i>
-                        Email
-                    </strong>
-                    <p class="text-muted">
-                        f4dlur@gmail.com
-                    </p>
+                    <strong><i class="fas fa-envelope mr-2"></i>Email</strong>
+                    <p class="text-muted">f4dlur@gmail.com</p>
                     <hr>
-                    <strong>
-                        <i class="fas fa-phone mr-2"></i>
-                        No Tlp
-                    </strong>
-                    <p class="text-muted">
-                        Jekulo, Kab Kudus
-                    </p>
+                    <strong><i class="fas fa-phone mr-2"></i>No Tlp</strong>
+                    <p class="text-muted">Jekulo, Kab Kudus</p>
                     <hr>
                     <a href="{{ route('admin.profile.edit', 1) }}" class="btn btn-primary btn-block">Setting</a>
                 </div>

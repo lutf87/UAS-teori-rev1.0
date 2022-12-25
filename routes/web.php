@@ -54,7 +54,7 @@ Route::group(['prefix'=>'/admin'], function() {
     });
 
     // transaksi
-    Route::group(['prefix'=>'trsnsaksi'], function() {
+    Route::group(['prefix'=>'transaksi'], function() {
         Route::get('', [TransaksiController::class, 'index'])->name('admin.transaksi.index');
         Route::get('show/{id}', [TransaksiController::class, 'show'])->name('admin.transaksi.show');
         Route::get('edit/{id}', [TransaksiController::class, 'edit'])->name('admin.transaksi.edit');
@@ -63,6 +63,6 @@ Route::group(['prefix'=>'/admin'], function() {
     // user profile
     Route::group(['prefix'=>'profile'], function() {
         Route::get('', [UserController::class, 'index'])->name('admin.profile.index');
-        Route::get('setting/{id}', [UserController::class], 'edit')->name('admin.profile.edit');
+        Route::get('setting/{id}', [UserController::class, 'edit'])->name('admin.profile.edit');
     });
 });
