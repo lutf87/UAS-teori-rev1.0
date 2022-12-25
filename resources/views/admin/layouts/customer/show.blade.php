@@ -19,33 +19,19 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <td>
-                                    Nama
-                                </td>
-                                <td>
-                                    Amin
-                                </td>
+                                <td>Nama</td>
+                                <td>Amin</td>
                             </tr>
                             <tr>
-                                <td>
-                                    Email
-                                </td>
-                                <td>
-                                    amin@gmail.com
-                                </td>
+                                <td>Email</td>
+                                <td>amin@gmail.com</td>
                             </tr>
                             <tr>
-                                <td>
-                                    No Tlp
-                                </td>
-                                <td>
-                                    Alamat
-                                </td>
+                                <td>No Tlp</td>
+                                <td>Alamat</td>
                             </tr>
                             <tr>
-                                <td>
-                                    Status
-                                </td>
+                                <td>Status</td>
                                 <td>
                                     <form action="#" class="form-inline">
                                         <div class="form-group mr-2">

@@ -10,4 +10,10 @@ class TransaksiController extends Controller
     {
         return view('admin.layouts.transaksi.index');
     }
+
+    public function show($id)
+    {
+        return view('admin.layouts.transaksi.show');
+    }
+
 }

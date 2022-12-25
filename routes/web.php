@@ -55,5 +55,6 @@ Route::group(['prefix'=>'/admin'], function() {
     // transaksi
     Route::group(['prefix'=>'trsnsaksi'], function() {
         Route::get('', [TransaksiController::class, 'index'])->name('admin.transaksi.index');
+        Route::get('show/{id}', [TransaksiController::class, 'show'])->name('admin.transaksi.show');
     });
 });

@@ -13,7 +13,7 @@ class CustomerController extends Controller
 
     public function edit($id)
     {
-        return view('admin.layouts.customer.edit');
+        return view('admin.layouts.customer.show');
     }
 
 }
