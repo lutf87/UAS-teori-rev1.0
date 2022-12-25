@@ -59,6 +59,9 @@
                                     <td>Sayur</td>
                                     <td>12 Produk</td>
                                     <td>
+                                        <a href="{{ route('admin.kategori.show', 1) }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                            Detail
+                                          </a>
                                         <a href="{{ route('admin.kategori.edit', 1) }}" class="btn btn-sm btn-primary mr-2 mb-2">
                                             Edit
                                         </a>
