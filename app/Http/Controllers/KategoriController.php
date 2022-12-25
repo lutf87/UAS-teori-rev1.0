@@ -16,4 +16,9 @@ class KategoriController extends Controller
         return view('admin.layouts.kategori.create');
     }
 
+    public function edit($id)
+    {
+        return view('admin.layouts.kategori.edit');
+    }
+
 }

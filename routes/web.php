@@ -32,5 +32,6 @@ Route::group(['prefix'=>'/admin'], function() {
     Route::group(['prefix'=>'kategori'], function() {
         Route::get('', [KategoriController::class, 'index'])->name('admin.kategori.index');
         Route::get('create', [KategoriController::class, 'create'])->name('admin.kategori.create');
+        Route::get('edit/{id}', [KategoriController::class, 'edit'])->name('admin.kategori.edit');
     });
 });
