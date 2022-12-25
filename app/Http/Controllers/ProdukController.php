@@ -16,4 +16,9 @@ class ProdukController extends Controller
         return view('admin.layouts.produk.create');
     }
 
+    public function edit($id)
+    {
+        return view('admin.layouts.produk.edit');
+    }
+
 }

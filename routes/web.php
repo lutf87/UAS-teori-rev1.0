@@ -41,5 +41,6 @@ Route::group(['prefix'=>'/admin'], function() {
     Route::group(['prefix'=>'produk'], function() {
         Route::get('', [ProdukController::class, 'index'])->name('admin.produk.index');
         Route::get('create', [ProdukController::class, 'create'])->name('admin.produk.create');
+        Route::get('edit/{id}', [ProdukController::class, 'edit'])->name('admin.produk.edit');
     });
 });
