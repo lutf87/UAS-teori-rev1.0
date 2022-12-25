@@ -52,7 +52,7 @@
                                         Aktif
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                        <a href="{{ route('admin.customer.edit', 1) }}" class="btn btn-sm btn-primary">Edit</a>
                                     </td>
                                 </tr>
                             </tbody>

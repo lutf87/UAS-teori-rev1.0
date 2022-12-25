@@ -48,5 +48,6 @@ Route::group(['prefix'=>'/admin'], function() {
     // customer
     Route::group(['prefix'=>'customer'], function() {
         Route::get('', [CustomerController::class, 'index'])->name('admin.customer.index');
+        Route::get('edit/{id}', [CustomerController::class, 'edit'])->name('admin.customer.edit');
     });
 });

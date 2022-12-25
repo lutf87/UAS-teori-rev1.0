@@ -10,4 +10,10 @@ class CustomerController extends Controller
     {
         return view('admin.layouts.customer.index');
     }
+
+    public function edit($id)
+    {
+        return view('admin.layouts.customer.edit');
+    }
+
 }
