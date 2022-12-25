@@ -16,4 +16,9 @@ class TransaksiController extends Controller
         return view('admin.layouts.transaksi.show');
     }
 
+    public function edit($id)
+    {
+        return view('admin.layouts.transaksi.edit');
+    }
+
 }

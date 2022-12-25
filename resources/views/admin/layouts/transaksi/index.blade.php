@@ -40,7 +40,7 @@
                                         <a href="{{ route('admin.transaksi.show', 1) }}" class="btn btn-sm btn-info mb-2">
                                             Detail
                                         </a>
-                                        <a href="#" class="btn btn-sm btn-primary mb-2">
+                                        <a href="{{ route('admin.transaksi.edit', 1) }}" class="btn btn-sm btn-primary mb-2">
                                             Edit
                                         </a>
                                     </td>
