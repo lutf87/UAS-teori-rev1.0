@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <h4 class="card-title">Produk</h4>
                     <div class="card-tools">
-                        <a href="#" class="btn btn-sm btn-primary">
+                        <a href="{{ route('admin.produk.create') }}" class="btn btn-sm btn-primary">
                             Baru
                         </a>
                     </div>

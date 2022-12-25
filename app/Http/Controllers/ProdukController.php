@@ -10,4 +10,10 @@ class ProdukController extends Controller
     {
         return view('admin.layouts.produk.index');
     }
+
+    public function create()
+    {
+        return view('admin.layouts.produk.create');
+    }
+
 }

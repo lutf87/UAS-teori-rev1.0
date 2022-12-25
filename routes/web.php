@@ -39,5 +39,6 @@ Route::group(['prefix'=>'/admin'], function() {
     // produk
     Route::group(['prefix'=>'produk'], function() {
         Route::get('', [ProdukController::class, 'index'])->name('admin.produk.index');
+        Route::get('create', [ProdukController::class, 'create'])->name('admin.produk.create');
     });
 });
