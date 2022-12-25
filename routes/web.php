@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,5 +50,10 @@ Route::group(['prefix'=>'/admin'], function() {
     Route::group(['prefix'=>'customer'], function() {
         Route::get('', [CustomerController::class, 'index'])->name('admin.customer.index');
         Route::get('edit/{id}', [CustomerController::class, 'edit'])->name('admin.customer.edit');
+    });
+
+    // transaksi
+    Route::group(['prefix'=>'trsnsaksi'], function() {
+        Route::get('', [TransaksiController::class, 'index'])->name('admin.transaksi.index');
     });
 });
