@@ -70,5 +70,6 @@ Route::group(['prefix'=>'/admin'], function() {
     // laporan
     Route::group(['prefix'=>'laporan'], function() {
         Route::get('', [LaporanController::class, 'index'])->name('admin.laporan.index');
+        Route::get('/detail/{id}', [LaporanController::class, 'show'])->name('admin.laporan.detail');
     });
 });

@@ -9,7 +9,7 @@
                     <h3 class="card-title">Form Laporan</h3>
                 </div>
                 <div class="card-body">
-                    <form action="#">
+                    <form action="{{ route('admin.laporan.detail', 1) }}">
                         <div class="form-group">
                             <label for="bulan">Bulan</label>
                             <select name="bulan" id="bulan" class="form-control">

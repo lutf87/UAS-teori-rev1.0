@@ -11,4 +11,9 @@ class LaporanController extends Controller
         return view('admin.layouts.laporan.index');
     }
 
+    public function show($id)
+    {
+        return view('admin.layouts.laporan.detail');
+    }
+
 }
