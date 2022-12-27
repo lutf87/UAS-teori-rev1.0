@@ -73,3 +73,7 @@ Route::group(['prefix'=>'/admin'], function() {
         Route::get('/detail/{id}', [LaporanController::class, 'show'])->name('admin.laporan.detail');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
