@@ -8,6 +8,7 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix'=>'/'], function() {
     // home
-    Route::get('home', [HomePageController::class, 'home'])->name('page.home');
+    Route::get('home', [HomePageController::class, 'home'])->name('home');
 
     // kategori
     Route::get('kategori', [HomePageController::class, 'kategori'])->name('page.kategori');
@@ -76,4 +77,4 @@ Route::group(['prefix'=>'/admin'], function() {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
