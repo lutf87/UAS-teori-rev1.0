@@ -25,10 +25,9 @@
     <!-- di bawah menu baru kontennya -->
 
     <!-- Mulai sini kontennya depannya kasih @ sama yield-->
-    <div class="p-5">
-        <div class="mt-4">
-            @yield('content')
-        </div>
+
+    <div class="mt-4">
+        @yield('content')
     </div>
     <!-- Sampai sini -->
 
