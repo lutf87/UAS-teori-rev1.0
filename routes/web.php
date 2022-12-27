@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomePageController;
@@ -33,6 +34,7 @@ Route::group(['prefix'=>'/'], function() {
 Route::group(['prefix'=>'/admin'], function() {
     // dashboard
     Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
     // kategori
     Route::group(['prefix'=>'kategori'], function() {

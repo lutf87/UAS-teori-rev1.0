@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return view('admin.layouts.laporan.index');
