@@ -4,19 +4,17 @@
 @section('content')
     <div class="row">
         <div class="col">
-            <div class="card">
+            <div class="card border-0 shadow rounded">
                 <div class="card-header">
-                    <h4 class="card-title">Kategori Produk</h4>
-                    <div class="card-tools">
-                        <a href="{{ route('admin.kategori.create') }}" class="btn btn-sm btn-primary">
-                            Baru
-                        </a>
-                    </div>
+                    <h4 class="card-title">Tambah Kategori</h4>
                 </div>
                 <div class="card-body">
                     <form action="#">
                         <div class="row">
                             <div class="col">
+                                <a href="{{ route('admin.kategori.create') }}" class="btn btn-success">Tambah Produk</a>
+                            </div>
+                            <div class="col-auto">
                                 <input type="text" name="keyword" id="keyword" class="form-control"
                                     placeholder="ketik keyword disini">
                             </div>
@@ -29,50 +27,45 @@
                     </form>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px">No</th>
+                                <th scope="col">Gambar</th>
+                                <th scope="col">Kode</th>
+                                <th scope="col">Nama</th>
+                                <th style="width: 150px" scope="col">Opsi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($posts as $post)
                                 <tr>
-                                    <th width="50px">No</th>
-                                    <th>Gambar</th>
-                                    <th>Kode</th>
-                                    <th>Nama</th>
-                                    <th>Jumlah Produk</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <img src="{{ asset('images/Vegetables-Slider.jpg') }}" alt="kategori 1" width='150px'>
-                                        <div class="row mt-2">
-                                            <div class="col">
-                                                <input type="file" name="gambar" id="gambar">
-                                            </div>
-                                            <div class="col-auto">
-                                                <button class="btn btn-sm btn-primary">Upload</button>
-                                            </div>
-                                        </div>
+                                    <td></td>
+                                    <td class="text-center">
+                                        <img src="{{ Storage::url('public/posts/') . $post->foto }}" class="rounded"
+                                            style="width: 200px">
                                     </td>
-                                    <td>KATE-1</td>
-                                    <td>Sayur</td>
-                                    <td>12 Produk</td>
+                                    <td>{{ $post->kode }}</td>
+                                    <td>{{ $post->nama }}</td>
                                     <td>
-                                        <a href="{{ route('admin.kategori.show', 1) }}" class="btn btn-sm btn-primary mr-2 mb-2">
-                                            Detail
-                                          </a>
-                                        <a href="{{ route('admin.kategori.edit', 1) }}" class="btn btn-sm btn-primary mr-2 mb-2">
-                                            Edit
-                                        </a>
-                                        <button class="btn btn-sm btn-danger mb-2">
-                                            Hapus
-                                        </button>
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                            action="#" method="POST">
+                                            <a href="#"
+                                                class="btn btn-sm btn-primary">Ubah</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                            @empty
+                                <div class="alert alert-danger">
+                                    Data Post belum Tersedia.
+                                </div>
+                            @endforelse
+                        </tbody>
+                    </table>
+                    {{ $posts->links() }}
                 </div>
             </div>
         </div>

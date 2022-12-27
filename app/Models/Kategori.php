@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Kategori extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'image',
-        'title',
-        'content',
+        'foto',
+        'kode',
+        'nama',
     ];
 }
